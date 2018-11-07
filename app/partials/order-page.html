@@ -1,0 +1,88 @@
+<div class="container">
+    <h3 class="title ">Orden</h3>
+    <hr>
+
+    <div class="row">
+        <div class="col-md-8">
+            <h4 class="subtitle">Aperitivos</h4>
+
+            <table class="table table-borderless">
+                <tr ng-repeat="product in aperitivosDept">
+                    <td>{{product.description}}</td>
+                    <td>
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                        <button type="button"  class="btn btn-default btn-number" ng-click="productRemove(product)">
+                                            <span class="fa fa-minus"></span>
+                            </button>
+                            </span>
+                            <input type="text" name="quantity" ng-model="product.quantity" class="form-control input-number" min="0" max="10" readonly placeholder="0">
+                            <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default btn-number" ng-click="productAdd(product)">
+                                            <span class="fa fa-plus"></span>
+                            </button>
+                            </span>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+        <div class="col-md-4 order-md-2 mb-4">
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+                <span class="title">Mi Carrito</span>
+                <span class="badge badge-secondary badge-pill">{{productsInCart.length}}</span>
+            </h4>
+            <ul class="list-group mb-3">
+                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                        <h6 class="text-muted">Productos</h6>
+                    </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between lh-condensed" ng-repeat="item in productsInCart track by $index">
+                    <div>
+
+                        <small class="text-muted">{{item.description}}</small>
+                    </div>
+                    <span class="text-muted">{{item.quantity | number}}</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                    <span class="text-black-50">Total</span>
+                    <input type="text" ng-model="amount" name="amount" class="form-control" readonly>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                    <a ui-sref="order" class="btn btn-warning" ng-submit="">
+                        <b>Checkout</b>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <h4 class="subtitle">Picaderas</h4>
+            <table class="table table-borderless">
+                <tr ng-repeat="product in picaderasDept">
+                    <td>{{product.description}}</td>
+                    <td>
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                    <button type="button"  class="btn btn-default btn-number" ng-click="productRemove(product)">
+                                        <span class="fa fa-minus"></span>
+                            </button>
+                            </span>
+                            <input type="text" name="quantity" ng-model="product.quantity" class="form-control input-number" min="0" max="10" readonly placeholder="0">
+                            <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default btn-number" ng-click="productAdd(product)">
+                                        <span class="fa fa-plus"></span>
+                            </button>
+                            </span>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,21 @@
+[{
+
+        "id": 0,
+        "description": "Huff Carter",
+        "price": 150,
+        "dept": 1
+    },
+    {
+        "id": 1,
+        "description": "Lela Silva",
+        "price": 150,
+        "dept": 2
+    },
+    {
+        "id": 2,
+        "description": "Lela Silvas",
+        "price": 150,
+        "dept": 1
+    }
+
+]
