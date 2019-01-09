@@ -15,6 +15,10 @@ app.config(['$stateProvider', '$locationProvider', '$urlRouterProvider', functio
         .state('login', {
             url: '/login',
             templateUrl: 'public/login-page.html'
+        })
+        .state('register', {
+            url: '/register',
+            templateUrl: 'public/register-page.html'
         });
 
     $locationProvider.html5Mode(true);
