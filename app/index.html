@@ -29,19 +29,25 @@
                 <li class="navbar-item">
                     <a ui-sref="test" class="nav-link">About Us</a>
                 </li>
-                <li class="navbar-item">
-                    <a ui-sref="login" class="nav-link">Late</a>
-                </li>
-                <li class="navbar-item">
-                    <a ui-sref="register" class="nav-link">Register</a>
-                </li>
             </ul>
             <div class="form-inline">
+                <ul class="navbar-nav mr-auto">
+                    <li class="navbar-item">
+                        <a ui-sref="register" class="nav-link">Register</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a ui-sref="login" class="nav-link">Log In <i class="fas fa-user"></i></a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="/logout">Log out</a>
+                    </li>
+
+                </ul>
                 <a ui-sref="order" class="btn btn-warning">
                     <b>Ordenar ahora!
-                                <i class="fas fa-utensils"></i>
-                                </i>
-                            </b>
+                        <i class="fas fa-utensils"></i>
+                        </i>
+                    </b>
                 </a>
             </div>
 
@@ -59,7 +65,8 @@
 
 
     <script src="/public/jquery.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
     <script src="/public/angular.min.js"></script>
     <script src="/public/release/angular-ui-router.min.js"></script>
     <script src="/public/bootstrap.min.js"></script>
@@ -70,6 +77,7 @@
     <script src="/public/config.js"></script>
     <script src="/public/landingPageCtrl.js"></script>
     <script src="/public/orderCtrl.js"></script>
+    <script src="/public/loginService.js"></script>
 
     <!-- <script src="/public/app.js"></script> -->
 </body>
